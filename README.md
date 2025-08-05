@@ -30,5 +30,6 @@
 - 我的收藏：喜欢的哲学卡片、文章、音频
 - 设置中心：隐私设置、账号管理、意见反馈
 <img width="466" height="830" alt="image" src="https://github.com/user-attachments/assets/7cd62552-d5bd-4644-bc39-4edc7aabcf79" />
-![Uploading image.png…]()
+<img width="465" height="835" alt="image" src="https://github.com/user-attachments/assets/3c5900d9-ed83-4e1b-a4b8-143a296ad89b" />
+
 
