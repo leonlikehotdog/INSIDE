@@ -1,0 +1,418 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+    background-color: #f8f8f8;
+    /* padding: 20rpx; */
+    box-sizing: border-box;
+    /* overflow: hidden; */ /* Prevent body scroll */
+}
+
+.mood-selection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    flex: 1;
+    height: 100%;
+    background-image: url("{{backgroundImage}}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f6d365; /* Fallback color */
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.current-date {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20rpx;
+    text-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}
+
+.selection-prompt {
+    font-size: 56rpx;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 50rpx;
+    text-align: center;
+    text-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}
+
+
+
+.mood-dolls-swiper {
+    width: 100%;
+    flex: 1;
+    height: 100%;
+}
+
+.mood-details-scroll-view {
+    flex: 1;
+    width: 100%;
+}
+
+.mood-details-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.save-button-container {
+    width: 100%;
+    padding: 30rpx 0 20rpx;
+    box-sizing: border-box;
+    margin-top: 10rpx;
+}
+
+.save-button {
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #4a90e2; /* A nice blue */
+    color: white;
+    border-radius: 45rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.save-button:active {
+    background-color: #357abd; /* Darker blue on press */
+}
+
+.success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.success-content {
+    background-color: white;
+    padding: 60rpx;
+    border-radius: 20rpx;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    animation: scaleUp 0.5s forwards;
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
+    }
+}
+
+.success-text {
+    display: block;
+    font-size: 36rpx;
+    color: #333;
+    margin-bottom: 40rpx;
+    font-style: italic;
+}
+
+.success-prompt {
+    font-size: 32rpx;
+    color: #888;
+}
+
+
+
+
+.mood-card {
+    background-color: #ffffff;
+    border-radius: 24rpx;
+    box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
+    padding: 40rpx;
+    margin-bottom: 36rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1rpx solid #f0f0f0;
+    /* overflow: hidden; */ /* Ensures content respects border-radius */
+    position: relative; /* For any absolute positioning within the card */
+}
+
+.mood-dolls-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: 300rpx;
+}
+
+.mood-dolls-placeholder {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+.mood-dolls-display {
+    width: 100%;
+    height: 200rpx; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+
+}
+
+.mood-doll-image {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.mood-rating-card {
+    /* height: 300rpx; */ /* Fixed height for mood rating card */
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.mood-diary-card {
+    /* height: 600rpx; */ /* Fixed height for mood diary card */
+    display: flex;
+    flex-direction: column;
+}
+
+.mood-history-card {
+    /* Specific styles for history card if needed */
+}
+
+.history-review-content {
+    height: 400rpx; /* Added fixed height for chart rendering */
+    width: 100%;
+}
+
+.mood-details-section {
+    margin-bottom: 60rpx;
+}
+
+.section-title {
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30rpx;
+    text-align: left !important;
+    border-left: 8rpx solid #6a82fb;
+    padding-left: 20rpx;
+}
+
+.mood-rating-placeholder {
+    width: 100%;
+    padding: 20rpx;
+    background-color: #f9f9f9;
+    border-radius: 15rpx;
+    text-align: center;
+}
+
+.mood-rating-slider {
+    width: 600rpx;
+    height: 80rpx;
+    margin: 40rpx auto 20rpx auto;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}
+
+/* Customizing slider track and handle for a modern look */
+.mood-rating-slider .wx-slider-track {
+    height: 12rpx;
+    border-radius: 6rpx;
+    background: linear-gradient(to right, #ff6b6b, #ffa502, #7bed9f);
+}
+
+.mood-rating-slider .wx-slider-handle {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    background-color: #6a82fb;
+    border: 4rpx solid #ffffff;
+    box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.mood-rating-slider .wx-slider-handle:active {
+    transform: scale(1.2);
+}
+
+.mood-rating-slider .wx-slider-active {
+    background-color: #6a82fb;
+}
+
+.mood-rating-value {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #6a82fb;
+    margin-top: 20rpx;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mood-rating-value::before,
+.mood-rating-value::after {
+    content: "";
+    display: inline-block;
+    width: 40rpx;
+    height: 40rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 20rpx;
+}
+
+.mood-rating-value::before {
+    background-image: url("../../images/icon_mood.png");
+}
+
+.mood-rating-value::after {
+    background-image: url("../../images/icon_assessment.png");
+}
+
+.mood-diary-textarea {
+    width: 100%;
+    min-height: 300rpx;
+    padding: 30rpx;
+    border: 1rpx solid #d0d0d0;
+    border-radius: 24rpx;
+    font-size: 34rpx;
+    color: #444444;
+    line-height: 1.8;
+    box-sizing: border-box;
+    margin-bottom: 40rpx;
+    background-color: #fafafa;
+    resize: vertical;
+    box-shadow: inset 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.mood-diary-actions-row {
+    display: flex;
+    flex-direction: column;
+    gap: 24rpx;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+
+.upload-image-button {
+    background-color: #f0f4ff;
+    color: #4a90e2;
+    padding: 14rpx 28rpx;
+    border: 2rpx solid #4a90e2;
+    border-radius: 16rpx;
+    font-size: 30rpx;
+    width: 50%;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.upload-image-button:active {
+    background-color: #d0e2ff;
+    box-shadow: 0 4rpx 12rpx rgba(74, 144, 226, 0.5);
+    transform: translateY(2rpx);
+}
+
+.save-button {
+    width: 60%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 45rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 6rpx 16rpx rgba(74, 144, 226, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.save-button:active {
+    background-color: #357abd;
+}
+
+.uploaded-image {
+    width: 100%;
+    max-height: 450rpx;
+    border-radius: 24rpx;
+    margin-top: 30rpx;
+    border: 1rpx solid #dddddd;
+    box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+.history-review-placeholder {
+    width: 100%;
+    padding: 20rpx;
+    background-color: #f9f9f9;
+    border-radius: 15rpx;
+    text-align: center;
+}
+
+.history-review-content {
+    height: 400rpx; /* Add a fixed height for the chart to render */
+    height: 400rpx; /* Set a fixed height for the chart container */
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.mood-doll-image {
+    width: 100%;
+    height: 80%;
+}
+
+.mood-details-scroll-view {
+    width: 100%;
+    flex: 1; /* Take full height of the parent */
+    box-sizing: border-box;
+    padding: 30rpx;
+}
+
+.mood-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100rpx; /* Add some padding at the bottom for scroll comfort */
+
+    width: 100%;
+    flex: 1;
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+    padding: 40rpx;
+    box-sizing: border-box;
+}
+
+.mood-details-container text {
+    font-size: 36rpx;
+    color: #666;
+}

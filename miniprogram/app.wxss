@@ -1,0 +1,5 @@
+/* 公共样式初始化，可以放字体、主题色等 */
+page {
+    background-color: #f5f6f8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI';
+  }

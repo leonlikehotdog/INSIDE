@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INSIDE · 心理疗愈原型</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+    .page {
+      display: none;
+      padding: 16px;
+      animation: fadeIn 0.3s ease;
+    }
+    .active {
+      display: block;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #3498db;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+      z-index: 10;
+    }
+    .nav button {
+      flex: 1;
+      padding: 10px 0;
+      font-size: 14px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #3498db;
+    }
+    .nav button:hover {
+      background-color: #eaf2f8;
+    }
+    textarea, input[type="range"] {
+      width: 100%;
+      margin-top: 8px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 首页 -->
+  <div id="home" class="page active">
+    <h2>首页 · INSIDE</h2>
+    <div class="card">🌟 今日哲思：存在先于本质</div>
+    <div class="card">📖 推荐文章：如何与焦虑共处</div>
+    <div class="card">🎧 冥想音频：呼吸练习 · 5分钟</div>
+  </div>
+
+  <!-- 心情记录页 -->
+  <div id="mood" class="page">
+    <h2>心情记录</h2>
+    <div class="card">
+      <label>选择今日情绪：</label><br/>
+      😊 😐 😢 😠 😴
+    </div>
+    <div class="card">
+      <label>情绪评分：</label><br/>
+      <input type="range" min="1" max="10" />
+    </div>
+    <div class="card">
+      <label>心情日记：</label><br/>
+      <textarea rows="4" placeholder="写下今天的感受..."></textarea>
+    </div>
+    <div class="card">
+      <button style="padding:10px 20px; background:#3498db; color:#fff; border:none; border-radius:8px;">提交记录</button>
+    </div>
+  </div>
+
+  <!-- 心理测评页 -->
+  <div id="assessment" class="page">
+    <h2>心理测评</h2>
+    <div class="card">🧪 焦虑量表 · 10题</div>
+    <div class="card">🧪 空心病量表 · 8题</div>
+    <div class="card">📊 我的测评报告 · 查看趋势</div>
+  </div>
+
+  <!-- 我的页 -->
+  <div id="profile" class="page">
+    <h2>我的 · INSIDE</h2>
+    <div class="card">📈 成长图谱：已打卡 12 天</div>
+    <div class="card">❤️ 我的收藏：哲思卡片 · 冥想音频</div>
+    <div class="card">⚙️ 设置中心：隐私 · 通知 · 反馈</div>
+  </div>
+
+  <!-- 底部导航栏 -->
+  <div class="nav">
+    <button onclick="showPage('home')">首页</button>
+    <button onclick="showPage('mood')">心情</button>
+    <button onclick="showPage('assessment')">测评</button>
+    <button onclick="showPage('profile')">我的</button>
+  </div>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

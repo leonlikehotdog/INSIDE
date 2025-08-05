@@ -1,0 +1,71 @@
+<!--pages/mood/mood.wxml-->
+<view class="container">
+    <!-- Stage 1: Mood Selection -->
+    <block wx:if="{{!moodSelected}}">
+            <view class="mood-selection-container" style="background-image: url({{backgroundImage}});">
+            <text class="current-date">{{currentDate}}</text>
+            <text class="selection-prompt">请选择今天的心情</text>
+            <!-- Placeholder for mood dolls - will be implemented with swiper later -->
+            <view class="mood-dolls-placeholder">
+                <!-- Mood dolls will go here -->
+                <swiper class="mood-dolls-swiper" circular="true" current="{{currentMoodIndex}}" bindchange="onSwiperChange">
+                    <swiper-item wx:for="{{moodDolls}}" wx:key="index">
+                        <image class="mood-doll-image" src="{{item.src}}" mode="aspectFit" data-mood-index="{{index}}" bindtap="selectMood"></image>
+                    </swiper-item>
+                </swiper>
+            </view>
+        </view>
+    </block>
+
+    <!-- Stage 2: Mood Details (initially hidden) -->
+    <block wx:else>
+        <scroll-view scroll-y="true" class="mood-details-scroll-view">
+            <view class="mood-details-container">
+                <!-- Mood Dolls Section -->
+                <view class="mood-card mood-dolls-card">
+                    <text class="section-title">今日心情娃娃</text>
+                    <view class="mood-dolls-display">
+                        <!-- Placeholder for the selected mood doll image -->
+                        <image class="mood-doll-image" src="{{selectedMoodDoll}}" mode="aspectFit"></image>
+                    </view>
+                </view>
+
+                <!-- Mood Rating Section -->
+                <view class="mood-card mood-rating-card">
+                    <text class="section-title">心情评分</text>
+                    <slider class="mood-rating-slider" min="1" max="10" step="1" show-value="true" bindchange="onMoodRatingChange"></slider>
+                </view>
+
+                <!-- Mood Diary Section -->
+                <view class="mood-card mood-diary-card">
+                    <text class="section-title">心情日记</text>
+                    <textarea class="mood-diary-textarea enhanced" placeholder="是什么让你有这种感觉？" auto-height="true" bindinput="onDiaryInput"></textarea>
+                    <view class="mood-diary-actions-row">
+                        <button class="upload-image-button enhanced" bindtap="onUploadImage">上传图片</button>
+                        <button class="save-button enhanced" bindtap="saveMood">保存</button>
+                    </view>
+                    <image wx:if="{{diaryImage}}" class="uploaded-image" src="{{diaryImage}}" mode="aspectFit"></image>
+                </view>
+
+                <!-- History Review Section -->
+                <view class="mood-card mood-history-card">
+                    <text class="section-title">历史回顾</text>
+                    <view class="history-review-content">
+                        <text>心情趋势图</text>
+                        <line-chart chartData="{{moodChartData}}" chartLabels="{{moodChartLabels}}"></line-chart>
+                    </view>
+                </view>
+
+
+            </view>
+        </scroll-view>
+
+        <!-- Success Popup -->
+        <view class="success-popup" wx:if="{{showSuccessPopup}}" bindtap="hideSuccessPopup">
+            <view class="success-content">
+                <text class="success-text">“{{philosophyQuote}}”</text>
+                <text class="success-prompt">已保存</text>
+            </view>
+        </view>
+    </block>
+</view>

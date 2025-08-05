@@ -1,0 +1,18 @@
+<!--miniprogram/pages/ai_partner/ai_partner.wxml-->
+<view class="chat-container">
+  <scroll-view scroll-y="true" class="chat-history" scroll-into-view="{{'msg-' + (messages.length - 1)}}">
+    <block wx:for="{{messages}}" wx:key="index">
+      <view id="{{'msg-' + index}}" class="message-item {{item.role === 'user' ? 'user-message' : 'ai-message'}}">
+        <image class="avatar" src="{{item.role === 'user' ? 'http://t06x70l63.hn-bkt.clouddn.com/avatar_placeholder.png' : '/images/icon_ai_partner.png'}}"></image>
+        <view class="message-content">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="chat-input-area">
+    <input class="chat-input" type="text" placeholder="和我聊聊吧..." value="{{inputValue}}" bindinput="bindKeyInput" />
+    <button class="send-btn" bindtap="sendMessage">发送</button>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/* pages/assessment/assessment.wxss */
+.container {
+    padding: 20rpx;
+}

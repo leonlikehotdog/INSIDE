@@ -1,0 +1,37 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/mood/mood",
+        "pages/assessment/assessment",
+        "pages/community/community",
+        "pages/profile/profile"
+    ],
+    "window": {
+        "navigationBarTitleText": "INSIDE",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black"
+    },
+
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/mood/mood",
+                "text": "心情"
+            },
+            {
+                "pagePath": "pages/assessment/assessment",
+                "text": "测评"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "我的"
+            }
+        ]
+    }
+}

@@ -1,0 +1,200 @@
+/* miniprogram/pages/community/community.wxss */
+.container {
+  background-color: #f7f8fa;
+  min-height: 100vh;
+  padding-bottom: 180rpx; /* 为底部AI伙伴入口和发布按钮留出空间 */
+}
+
+/* 每周主题沙龙 */
+.theme-salon-card {
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+  color: white;
+  margin: 30rpx;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 20rpx rgba(106, 130, 251, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.card-subtitle {
+  font-size: 24rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5rpx 15rpx;
+  border-radius: 20rpx;
+}
+
+.card-content .topic-title {
+  font-size: 38rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.card-content .topic-description {
+  font-size: 26rpx;
+  opacity: 0.9;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.participants-info {
+  display: flex;
+  align-items: center;
+}
+
+.participant-avatar {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  border: 2rpx solid white;
+  margin-left: -20rpx;
+}
+
+.participant-avatar:first-child {
+  margin-left: 0;
+}
+
+.participants-count {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.participate-btn {
+  background-color: white;
+  color: #6a82fb;
+  border: none;
+  border-radius: 30rpx;
+  padding: 10rpx 30rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+/* 帖子列表 */
+.post-list {
+  padding: 0 30rpx;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.user-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.user-nickname {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.post-content {
+  font-size: 28rpx;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30rpx;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.post-actions {
+  display: flex;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  margin-right: 40rpx;
+}
+
+.action-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+
+/* 发布按钮 */
+.post-btn-container {
+  position: fixed;
+  right: 40rpx;
+  bottom: 220rpx; /* 调整位置，避免与AI伙伴入口重叠 */
+  z-index: 1000;
+}
+
+.post-btn {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+  box-shadow: 0 8rpx 20rpx rgba(106, 130, 251, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.post-btn-icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* AI哲思伙伴入口 */
+.ai-partner-entry {
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15rpx 40rpx;
+  border-radius: 40rpx;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.ai-partner-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 15rpx;
+}
+
+.ai-partner-text {
+  font-size: 28rpx;
+}

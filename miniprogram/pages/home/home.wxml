@@ -1,0 +1,72 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <!-- 顶部欢迎和每日哲思 -->
+  <view class="header-card">
+    <view class="user-info">
+      <image class="avatar" src="http://t06x70l63.hn-bkt.clouddn.com/avatar_placeholder.png"/>
+      <text class="welcome-text">你好, 探索者</text>
+    </view>
+    <view class="philosophy-quote">
+      <text class="quote-text">{{philosophy.text}}</text>
+      <text class="quote-author">—— {{philosophy.author}}</text>
+    </view>
+  </view>
+
+  <!-- 功能导航 -->
+  <view class="nav-grid">
+    <block wx:for="{{navItems}}" wx:key="index">
+      <view class="nav-card" style="{{item.backgroundImage ? 'background-image: url(' + item.backgroundImage + '); background-size: cover; background-position: center;' : 'background-color: ' + item.backgroundColor}} " bindtap="navigateTo" data-url="{{item.url}}">
+        <view class="card-content">
+          <image class="nav-icon" src="{{item.icon}}" mode="aspectFit"></image>
+          <view class="text-content">
+            <text class="nav-title">{{item.text}}</text>
+            <text class="nav-subtitle">{{item.subtitle}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 内容推荐 -->
+  <view class="recommend-section">
+    <view class="section-header">
+      <text class="section-title">为你推荐</text>
+      <text class="see-more">查看更多</text>
+    </view>
+    <scroll-view scroll-x="true" class="recommend-scroll">
+      <block wx:for="{{recommendations}}" wx:key="index">
+        <view class="recommend-card">
+          <block wx:if="{{item.type === 'video'}}">
+            <video
+              id="myVideo"
+              src="{{item.videoUrl}}"
+              poster="{{item.image}}"
+              controls
+              loop
+              muted
+              initial-time="0"
+              direction="0"
+              show-progress="true"
+              show-fullscreen-btn="true"
+              show-play-btn="true"
+              enable-progress-gesture="true"
+              object-fit="cover"
+              play-btn-position="center"
+              enable-auto-rotation="false"
+              title="{{item.title}}"
+              bindended="videoEnded"
+              class="recommend-video"
+            ></video>
+          </block>
+          <block wx:else>
+            <image class="recommend-image" src="{{item.image}}" mode="aspectFill"/>
+          </block>
+          <view class="recommend-info">
+            <text class="recommend-title">{{item.title}}</text>
+            <text class="recommend-desc">{{item.desc}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

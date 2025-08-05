@@ -1,0 +1,56 @@
+<!--miniprogram/pages/community/community.wxml-->
+<view class="container">
+  <!-- 每周主题沙龙 -->
+  <view class="theme-salon-card">
+    <view class="card-header">
+      <text class="card-title">每周主题沙龙</text>
+      <text class="card-subtitle">#{{weeklyTopic.tag}}#</text>
+    </view>
+    <view class="card-content">
+      <text class="topic-title">{{weeklyTopic.title}}</text>
+      <text class="topic-description">{{weeklyTopic.description}}</text>
+    </view>
+    <view class="card-footer">
+      <view class="participants-info">
+        <image class="participant-avatar" src="https://s1.aigei.com/prevfiles/f7f1fea7faef4185b4b8f6ce24b0d937.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:jEg70uwtmNsdA7WHHYXDgpCrKJY="></image>
+        <image class="participant-avatar" src="https://img.ixintu.com/upload/jpg/20210522/4fbc800af5bf947a54fe21d5a5581b68_49943_605_717.jpg!ys"></image>
+        <text class="participants-count">{{weeklyTopic.participants}}人已参与</text>
+      </view>
+      <button class="participate-btn">立即参与</button>
+    </view>
+  </view>
+
+  <!-- 帖子列表 -->
+  <scroll-view scroll-y="true" class="post-list">
+    <block wx:for="{{posts}}" wx:key="id">
+      <view class="post-card">
+        <view class="post-header">
+          <image class="user-avatar" src="{{item.avatar}}"></image>
+          <text class="user-nickname">{{item.nickname}}</text>
+        </view>
+        <text class="post-content">{{item.content}}</text>
+        <view class="post-footer">
+          <view class="post-actions">
+            <view class="action-item">
+              <image class="action-icon" src="/images/icon_embrace.png"></image>
+              <text class="action-text">拥抱 {{item.embraces}}</text>
+            </view>
+            <view class="action-item">
+              <image class="action-icon" src="/images/icon_comment.png"></image>
+              <text class="action-text">评论 {{item.comments}}</text>
+            </view>
+          </view>
+          <text class="post-time">{{item.time}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 发布按钮 -->
+  <view class="post-btn-container">
+    <button class="post-btn" bindtap="navigateToPostCreation">
+      <image class="post-btn-icon" src="/images/icon_pen.png"></image>
+    </button>
+  </view>
+
+</view>

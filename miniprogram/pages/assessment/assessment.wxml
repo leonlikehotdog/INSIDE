@@ -1,0 +1,4 @@
+<!--pages/assessment/assessment.wxml-->
+<view class="container">
+    <text>测评页面</text>
+</view>

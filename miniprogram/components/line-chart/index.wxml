@@ -1,0 +1,12 @@
+<view class="line-chart-container">
+  <canvas
+    class="mood-line-chart"
+    canvas-id="moodLineChart"
+    id="moodLineChart"
+    bindtouchstart="handleTouch"
+  ></canvas>
+
+  <view wx:if="{{tooltip.visible}}" class="tooltip" style="left: {{tooltip.x}}px; top: {{tooltip.y}}px;">
+    {{tooltip.value}}
+  </view>
+</view>
