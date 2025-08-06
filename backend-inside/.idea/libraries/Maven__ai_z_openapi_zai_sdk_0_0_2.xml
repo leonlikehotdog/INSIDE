@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ai.z.openapi:zai-sdk:0.0.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/ai/z/openapi/zai-sdk/0.0.2/zai-sdk-0.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/ai/z/openapi/zai-sdk/0.0.2/zai-sdk-0.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/ai/z/openapi/zai-sdk/0.0.2/zai-sdk-0.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

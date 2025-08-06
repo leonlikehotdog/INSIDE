@@ -39,7 +39,7 @@
                 <!-- Mood Diary Section -->
                 <view class="mood-card mood-diary-card">
                     <text class="section-title">心情日记</text>
-                    <textarea class="mood-diary-textarea enhanced" placeholder="是什么让你有这种感觉？" auto-height="true" bindinput="onDiaryInput"></textarea>
+                    <textarea class="mood-diary-textarea enhanced" placeholder="记录一下今天吧" auto-height="true" bindinput="onDiaryInput"></textarea>
                     <view class="mood-diary-actions-row">
                         <button class="upload-image-button enhanced" bindtap="onUploadImage">上传图片</button>
                         <button class="save-button enhanced" bindtap="saveMood">保存</button>
