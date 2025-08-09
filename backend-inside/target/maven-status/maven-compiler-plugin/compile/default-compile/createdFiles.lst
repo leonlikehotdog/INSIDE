@@ -1,0 +1,13 @@
+com\inside\backendinside\aiPartner\domain\User.class
+com\inside\backendinside\config\CorsConfig.class
+com\inside\backendinside\BackendInsideApplication.class
+com\inside\backendinside\aiPartner\mapper\ChatMapper.class
+com\inside\backendinside\aiPartner\controller\AIController.class
+com\inside\backendinside\aiPartner\service\AIService.class
+com\inside\backendinside\aiPartner\service\impl\AIServiceImpl.class
+com\inside\backendinside\aiPartner\domain\Chat.class
+com\inside\backendinside\aiPartner\service\impl\UserServiceImpl.class
+com\inside\backendinside\common\AJAXResult.class
+com\inside\backendinside\aiPartner\controller\UserController.class
+com\inside\backendinside\aiPartner\mapper\UserMapper.class
+com\inside\backendinside\aiPartner\service\UserService.class

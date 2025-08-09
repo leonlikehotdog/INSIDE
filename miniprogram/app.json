@@ -4,7 +4,8 @@
         "pages/mood/mood",
         "pages/assessment/assessment",
         "pages/community/community",
-        "pages/profile/profile"
+        "pages/profile/profile",
+        "pages/ai_partner/ai_partner"
     ],
     "window": {
         "navigationBarTitleText": "INSIDE",

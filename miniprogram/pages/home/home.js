@@ -20,8 +20,9 @@ Page({
     navItems: [
         { icon: '/images/icon_mood.png', text: '情绪记录', subtitle: '记录每日心情', backgroundColor: '#fde2e2', url: '/pages/mood/mood', backgroundImage: 'http://t06x70l63.hn-bkt.clouddn.com/mood_record.png' },
         { icon: '/images/icon_assessment.png', text: '心理测评', subtitle: '探索真实自我', backgroundColor: '#e2e8fd', url: '/pages/assessment/assessment' },
-        { icon: '/images/icon_explore.png', text: '内容探索', subtitle: '发现内在力量', backgroundColor: '#e2fdf2', url: '/pages/explore/explore' },
-        { icon: '/images/icon_community.png', text: '社区树洞', subtitle: '倾诉与被倾听', backgroundColor: '#fdf8e2', url: '/pages/community/community' }
+        { icon: '/images/icon_explore.png', text: '浪浪山妖怪', subtitle: '倾听你的声音', backgroundColor: '#e2fdf2', url: '/pages/ai_partner/ai_partner' ,backgroundImage:'https://gd-hbimg.huaban.com/74a01e8cdfb5229f1af5d9ef7f046a61ee0638dd20a2e-GzcPzf_fw240webp'},
+        { icon: '/images/icon_community.png', text: '社区树洞', subtitle: '倾诉与被倾听', backgroundColor: '#fdf8e2', url: '/pages/community/community' },
+       
       ],      
     // 推荐内容
     recommendations: [

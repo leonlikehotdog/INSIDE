@@ -1,5 +1,8 @@
 // 全局逻辑入口
 App({
+  globalData: {
+    backendUrl: 'http://172.20.10.3:8080'
+  },
   onLaunch() {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []

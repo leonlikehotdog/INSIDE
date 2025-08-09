@@ -2,10 +2,15 @@
 <view class="chat-container">
   <scroll-view scroll-y="true" class="chat-history" scroll-into-view="{{'msg-' + (messages.length - 1)}}">
     <block wx:for="{{messages}}" wx:key="index">
-      <view id="{{'msg-' + index}}" class="message-item {{item.role === 'user' ? 'user-message' : 'ai-message'}}">
-        <image class="avatar" src="{{item.role === 'user' ? 'http://t06x70l63.hn-bkt.clouddn.com/avatar_placeholder.png' : '/images/icon_ai_partner.png'}}"></image>
+      <view id="{{'msg-' + index}}" class="message-item {{item.role === 'user' ? 'user-message' : (item.role === 'assistant' ? 'ai-message' : 'thinking-message')}}">
+        <image class="avatar" src="{{item.role === 'user' ? 'http://t06x70l63.hn-bkt.clouddn.com/avatar_placeholder.png' : 'https://gd-hbimg.huaban.com/676e0b4719a87d48711ee3a293d291d99f54a8d226522-WNpGrD_fw240webp'}}"></image>
         <view class="message-content">
-          <text>{{item.content}}</text>
+          <rich-text wx:if="{{item.role !== 'thinking'}}" class="message-bubble" nodes="{{item.htmlContent}}"></rich-text>
+          <view wx:if="{{item.role === 'thinking'}}" class="thinking-indicator">
+            <view class="dot"></view>
+            <view class="dot"></view>
+            <view class="dot"></view>
+          </view>
         </view>
       </view>
     </block>

@@ -114,7 +114,7 @@ Page({
    */
   navigateToAIPartner() {
     wx.navigateTo({
-      url: '/pages/ai-partner/ai-partner' // 假设AI伙伴页面的路径
+      url: '/pages/ai_partner/ai_partner' // 假设AI伙伴页面的路径
     });
   }
 })

@@ -21,6 +21,7 @@
 
 .ai-message {
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .user-message {
@@ -82,4 +83,49 @@
   line-height: 80rpx;
   font-size: 28rpx;
   margin-left: 20rpx;
+}
+
+.message-bubble {
+  border-radius: 15rpx;
+  max-width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.thinking-message .avatar {
+  margin-right: 20rpx;
+}
+
+.thinking-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60rpx; /* Adjust as needed */
+  padding: 0 20rpx;
+}
+
+.thinking-indicator .dot {
+  width: 12rpx;
+  height: 12rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 4rpx;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.thinking-indicator .dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.thinking-indicator .dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
 }

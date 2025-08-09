@@ -23,8 +23,8 @@ Page({
         ],
         moodBackgrounds: [
             'http://t06x70l63.hn-bkt.clouddn.com/dollBackground.png',
-            'http://t06x70l63.hn-bkt.clouddn.com/dollBackground02.png',
-            'http://t06x70l63.hn-bkt.clouddn.com/dollBackground03.png'
+            'https://sns-webpic-qc.xhscdn.com/202508051950/682a08f6be3554fd7d17a2919dcbad9c/1040g00831ighuv68gc1g5o3gi4k0978c37tuolg!nd_dft_wlteh_webp_3',
+            'https://sns-webpic-qc.xhscdn.com/202508051948/ee661e8bb60a94b5bd4d5e24c46ac31c/1040g00831alki6ak7a6g5ntej8jg85htc8fkjmo!nd_dft_wlteh_webp_3'
         ],
         backgroundImage: '',
         moodChartData: [7, 8, 6, 9, 7, 8, 10], // Dummy data for mood ratings

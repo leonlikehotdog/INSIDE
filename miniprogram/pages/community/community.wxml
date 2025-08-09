@@ -53,4 +53,9 @@
     </button>
   </view>
 
+  <!-- AI伙伴入口 -->
+  <view class="ai-partner-entry" bindtap="navigateToAiPartner">
+    <image class="ai-partner-icon" src="/images/icon_ai_partner.png"></image>
+  </view>
+
 </view>
